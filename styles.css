@@ -1,14 +1,82 @@
-
 /* Bar button that opens / closes Notion page properties list */
-.propertiesToggleBar {
-    font-size: 4px;
+.nle-toggle-button {
+    display: flex;
+    align-items: center;
+
+    height: 28px;
+    width: 150px;
+    padding: 8px 8px 8px 6px;
+    margin-left: calc(126px + env(safe-area-inset-left));
+    margin-bottom: 4px;
+
     border: none;
-    width: 100%;
-    
+    border-radius: 3px;
+
+    user-select: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
-/* Uncomment this to fully hide comments block 
+.nle-toggle-button svg {
+    margin-right: 10px;
+    transition: .2s;
+    will-change: transform;
+}
+
+.nle-toggle-button.nle-enabled svg {
+    transform: rotate(-180deg);
+}
+
+.notion-dark-theme .nle-toggle-button {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgb(71, 76, 80);
+}
+
+.notion-light-theme .nle-toggle-button {
+    color: rgb(55, 53, 47);
+    background: rgba(55, 53, 47, 0.08);
+}
+
+/* Uncomment this to fully hide comments block
 .notion-page-view-discussion {
     height: 0;
     display: none;
 } */
+
+/* Reorder elements in pages */
+.notion-scroller.vertical > div:first-child {
+    order: 0;
+}
+
+.notion-scroller.vertical > div.ntl-properties-button {
+    order: 1;
+}
+
+.notion-scroller.vertical > div.properties-container {
+    order: 2;
+}
+
+.notion-scroller.vertical > div.notion-page-content {
+    order: 3;
+}
+
+.notion-scroller.vertical > div.notion-page-view-discussion {
+    order: 100;
+}
+
+/* Bigger page peek */
+.notion-peek-renderer > div:nth-child(2) {
+    top: 40px !important;
+    height: calc(100% - 80px) !important;
+}
+
+.notion-page-controls {
+    margin-top: 4px !important;
+}
+
+/* Remove annoying overlay obscuring videos */
+.notion-video-block > div:not([embed-ghost]) {
+    display: none;
+}
