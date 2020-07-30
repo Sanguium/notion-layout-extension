@@ -2,12 +2,17 @@
 ## What is it?
 Chrome Extension that makes viewing Notion database pages better!
 
-It auto-hides page properties list that often pushes down the page content.
+Features:
+  - Auto-hides page properties list that often pushes down the page content.
+  - Adds a button to hide page content as well.
+  - Reorder comment section to the bottom of the page.
+  - Removes the annoying overlay that obscures videos.
+  - Makes page previews larger to waste less screen space.
 
 ## How it works?
-By default list of properties is collapsed:             |  Clicking on the bar opens/hides the list of properties:
+By default list of properties is collapsed:             |  Clicking on the button opens/hides the list of properties and/or page content:
 :-------------------------:|:-------------------------:
-![collapsed](https://github.com/alexander-kazakov/notion-layout-extension/raw/master/img/collapsed.png)  |  ![uncollapsed](https://github.com/alexander-kazakov/notion-layout-extension/raw/master/img/uncollapsed.png)
+![collapsed](https://github.com/sanguium/notion-layout-extension/raw/master/img/collapsed.png)  |  ![uncollapsed](https://github.com/sanguium/notion-layout-extension/raw/master/img/uncollapsed.png)
 
 ## How to install?
 1. Download the whole repo as Zip file (see green button "Code" in top right of this page)
@@ -21,9 +26,8 @@ YouTube video which shows steps 2-5: https://www.youtube.com/watch?v=5W9ZPEaVMWE
 
 ## Safety
 This is a simple extension with <2 pages of code. You can read it entirely to make sure it is safe. 
-PS. I include official copy of jQuery library as I didn't figure out how to reference it via URL in the manifest file.
 
 ## Notice
-I wrote it in an afternoon for myself and sharing with the community. It is not affiliated with Notion the company.
+Neither myself or the original autor [alexander-kazakov](https://github.com/alexander-kazakov) are affiliated with Notion the company.
 
-If you find a bug, you can log it here: https://github.com/alexander-kazakov/notion-layout-extension/issues
+If you find a bug, you can log it here: https://github.com/Sanguium/notion-layout-extension/issues
