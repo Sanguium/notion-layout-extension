@@ -47,7 +47,6 @@ function processSections(selector, buttonText, buttonClass, hide, extraProcess =
         }
 
         console.log("Notion Layout Improver: Processing new section");
-        // section.classList.add('properties-container');
 
         // Set up the properties toggle button
         let toggleButton = createToggleButton(buttonText, buttonClass, section, !hide);

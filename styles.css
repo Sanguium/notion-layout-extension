@@ -8,7 +8,8 @@
     padding: 8px 8px 8px 6px;
     margin-left: calc(126px + env(safe-area-inset-left));
     margin-bottom: 4px;
-
+    
+    background: none;
     border: none;
     border-radius: 3px;
 
@@ -31,13 +32,19 @@
 
 .notion-dark-theme .nle-toggle-button {
     color: rgba(255, 255, 255, 0.9);
+}
+
+.notion-dark-theme .nle-toggle-button.nle-enabled {
     background: rgb(71, 76, 80);
 }
 
 .notion-light-theme .nle-toggle-button {
     color: rgb(55, 53, 47);
+}
+.notion-light-theme .nle-toggle-button.nle-enabled {
     background: rgba(55, 53, 47, 0.08);
 }
+
 
 /* Uncomment this to fully hide comments block
 .notion-page-view-discussion {
@@ -50,7 +57,7 @@
     order: 0;
 }
 
-.notion-scroller.vertical > div.ntl-properties-button {
+.notion-scroller.vertical > .nle-properties-button {
     order: 1;
 }
 
@@ -58,8 +65,12 @@
     order: 2;
 }
 
+.notion-scroller.vertical > .nle-content-button {
+    order: 3
+}
+
 .notion-scroller.vertical > div.notion-page-content {
-    order: 3;
+    order: 4;
 }
 
 .notion-scroller.vertical > div.notion-page-view-discussion {
