@@ -50,7 +50,7 @@ function processSections(selector, buttonText, buttonClass, hide, extraProcess =
         // section.classList.add('properties-container');
 
         // Set up the properties toggle button
-        let toggleButton = createToggleButton(buttonText, buttonClass, section);
+        let toggleButton = createToggleButton(buttonText, buttonClass, section, !hide);
 
         // Add the toggle button and hide the list
         section.parentElement.appendChild(toggleButton);
@@ -64,8 +64,8 @@ function processSections(selector, buttonText, buttonClass, hide, extraProcess =
     });
 }
 
-function createToggleButton(text, buttonClass, section) {
-    let isVisible = false;
+function createToggleButton(text, buttonClass, section, initialState) {
+    let isVisible = initialState;
     let button = document.createElement('button');
     button.classList.add('nle-toggle-button');
     button.classList.add(buttonClass);
